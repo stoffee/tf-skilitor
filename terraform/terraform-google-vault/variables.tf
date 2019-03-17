@@ -35,34 +35,6 @@ variable "vault_source_image" {
 #  description = "The Google Image used to launch each node in the Consul Server cluster. You can build this Google Image yourself at /examples/vault-consul-image."
 #}
 
-variable "image_service_name" {
-  description = "The name of the Consul Server cluster. All resources will be namespaced by this value. E.g. consul-server-prod"
-}
-
-variable "image_service_source_image" {
-  description = "The Google Image used to launch each node in the Consul Server cluster. You can build this Google Image yourself at /examples/vault-consul-image."
-}
-
-# Nomad Server cluster
-
-variable "nomad_server_cluster_name" {
-  description = "The name of the Nomad Server cluster. All resources will be namespaced by this value. E.g. nomad-server-prod"
-}
-
-variable "nomad_server_source_image" {
-  description = "The Google Image used to launch each node in the Nomad Server cluster."
-}
-
-# Nomad Client cluster
-
-variable "nomad_client_cluster_name" {
-  description = "The name of the Nomad client cluster. All resources will be namespaced by this value. E.g. consul-server-prod"
-}
-
-variable "nomad_client_source_image" {
-  description = "The Google Image used to launch each node in the Nomad client cluster."
-}
-
 # Consul Server cluster
 
 variable "consul_server_cluster_name" {
