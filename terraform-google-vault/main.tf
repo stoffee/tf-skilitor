@@ -75,7 +75,8 @@ data "template_file" "startup_script_vault" {
 
 module "consul_cluster" {
   #  source = "git::git@github.com:hashicorp/terraform-google-consul.git//modules/consul-cluster?ref=v0.3.0"
-  source = "git::https://github.com/stoffee/tf-skilitor/terraform/terraform-google-consul.git//modules/consul-cluster"
+  # source = "git::https://github.com/stoffee/tf-skilitor/terraform/terraform-google-consul.git//modules/consul-cluster"
+  source = "../terraform-google-consul"
 
   gcp_project_id = "${var.gcp_project_id}"
   gcp_region     = "${var.gcp_region}"
