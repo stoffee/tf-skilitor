@@ -13,7 +13,7 @@ provider "google" {
 }
 
 terraform {
-  required_version = ">= 0.10.3"
+  required_version = ">= 0.11.13"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -76,7 +76,7 @@ data "template_file" "startup_script_vault" {
 module "consul_cluster" {
   #  source = "git::git@github.com:hashicorp/terraform-google-consul.git//modules/consul-cluster?ref=v0.3.0"
   # source = "git::https://github.com/stoffee/tf-skilitor/terraform/terraform-google-consul.git//modules/consul-cluster"
-  source = "../terraform-google-consul"
+  source = "../terraform-google-consul/modules/consul-cluster"
 
   gcp_project_id = "${var.gcp_project_id}"
   gcp_region     = "${var.gcp_region}"
